@@ -1,125 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Sekuya&display=swap');
-
 body{
-    margin:0;
-    padding:0;
     text-transform: capitalize;
     color: white;
-    background-color: #000;
-    font-family: "Cinzel Decorative", serif;
-    overflow-x: hidden;
+    background-color: #000000;
+    font-family: "Cinzel Decorative";
+    height:100vh;
 }
-
-.navw {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    padding: 15px 0;
-    background: rgba(0,0,0,0.5);
-}
-
-.n-l {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
-}
-
-.n-l li {
-    list-style-type: none;
-}
-
-.n-l a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    transition: 0.3s;
-}
-
-.n-l a:hover {
-    color: gold;
-}
-
 .back{
-    position: absolute;
-    top: 60px;
-    width: 100%;
+    position: relative;
+    font-family: "Sekuya";
+    z-index:1;
     text-align: center;
-    font-family: "Sekuya", sans-serif;
-    font-size: 12vw; 
-    z-index: 1;
+    margin-top: 50px;
+    font-size: 160px;
 }
 
-.back p {
+.back p{
     margin:0;
+    margin-top: 2px;
 }
-
+.n-l{
+    display: flex;
+    justify-content: space-evenly;
+}
+li,a{
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+}
 canvas {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     z-index: 3;
-    pointer-events: none;
+    pointer-events: none;   /* 👈 MOST IMPORTANT */
 }
 
 .left{
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    transform: translateY(-50%);
-    font-size: 2rem;
+    position:relative;
+    top:225px;
+    font-size: 25px;
     z-index: 1;
-    max-width: 90%;
+    margin-left:10px;
 }
-
-.left p {
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
 button{
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border: 2px solid gold;
+    padding:20px 30px;
+    font-size: 18px;
+    border: 2px solid black;
+    
     border-radius: 25px;
-    font-family: "Cinzel Decorative", serif;
-    background: transparent;
-    color: white;
-    cursor: pointer;
-    transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+    font-family: "Cinzel Decorative";
+    transition:transform 0.25s ease;
 }
-
 button:hover{
-    color: black;
-    background-color: gold;
-    transform: scale(1.1);
+    color: silver;
+    background-color: rgb(61, 61, 61);
+    transform: scale(1.1); /* 👈 scale up */
 }
-
-@media (max-width: 768px) {
-    .back {
-        font-size: 18vw;
-    }
-    .left {
-        font-size: 1.5rem;
-    }
-    button {
-        font-size: 1rem;
-        padding: 12px 25px;
-    }
-}
-
-@media (max-width: 480px) {
-    .back {
-        font-size: 24vw;
-    }
-    .left {
-        font-size: 1.2rem;
-    }
-    button {
-        font-size: 0.9rem;
-        padding: 10px 20px;
-    }
-}
-
