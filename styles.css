@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Sekuya&display=swap');
+body{
+    text-transform: capitalize;
+    color: white;
+    background-color: #000000;
+    font-family: "Cinzel Decorative";
+    height:100vh;
+}
+.back{
+    position: relative;
+    font-family: "Sekuya";
+    z-index:1;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 160px;
+}
+
+.back p{
+    margin:0;
+    margin-top: 2px;
+}
+.n-l{
+    display: flex;
+    justify-content: space-evenly;
+}
+li,a{
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+}
+canvas {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    pointer-events: none;   /* 👈 MOST IMPORTANT */
+}
+
+.left{
+    position:relative;
+    top:225px;
+    font-size: 25px;
+    z-index: 1;
+    margin-left:10px;
+}
+button{
+    padding:20px 30px;
+    font-size: 18px;
+    border: 2px solid black;
+    
+    border-radius: 25px;
+    font-family: "Cinzel Decorative";
+    transition:transform 0.25s ease;
+}
+button:hover{
+    color: silver;
+    background-color: rgb(61, 61, 61);
+    transform: scale(1.1); /* 👈 scale up */
+}
