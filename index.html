@@ -64,6 +64,11 @@
             renderer.render(scene, camera);
             }
             animate();
+            window.addEventListener('resize', () => {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
         </script>
         <div class="left">
             <p>limited edition.<br><br>taste luxury in every sip.</p>
@@ -71,4 +76,5 @@
         </div>
         
     </body>
+
 </html>
